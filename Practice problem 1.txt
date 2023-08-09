@@ -1,0 +1,25 @@
+print("Enter your Age or your born year")
+a = int(input())
+
+if a>100:
+    print(f"You will turn 100 years old in the year {a+100}")
+elif a<100 and a!= 0:
+    print(f"You will turn 100 years old in {100-a} years")
+else:
+    print("You aren't even born yet")
+
+print("Please provide a certain year to know your age in that year")
+b = int(input())
+
+if a>b:
+    print("You aren't even born yet buddy")
+    exit()
+elif b>2099:
+    print("You Probably won't be alive for that long bud")
+elif a>100:
+    print(f"You will be {b-a} Years old in the year {b}")
+elif a<100 and a!=0:
+    c = b - 2023
+    print(f"Your will be {c+a} years old in the year {b}")
+else:
+    print("Invalid input broo")

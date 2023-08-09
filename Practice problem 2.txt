@@ -1,0 +1,24 @@
+# Divide the apples
+
+print("Enter the number of Apples")
+n = int(input())
+print("Enter minimum divisor value")
+mn = int(input())
+print("Enter maximum divisor value")
+mx = int(input())
+
+if mn==mx:
+    print("This is not a range")
+    if n%mn==0:
+        print(f"{mn} is a divisor of {n}")
+    elif n%mn!=0:
+        print(f"{mn} is not a divisor of {n}")
+    exit()
+
+i = mn
+for i in range(mn,mx+1):
+
+    if n%i==0:
+        print(f"{i} is a divisor of {n}")
+    else:
+        print(f"{i} is not a divisor of {n}")
