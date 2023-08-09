@@ -1,0 +1,29 @@
+# Foods and Calories
+ls = []
+while(True):
+    print("Please add a number to your list")
+    l = int(input())
+    ls.append(l)
+    print("Press 'y' to add another number to list or 'n' to exit")
+    a = input()
+    if a == 'y':
+        continue
+    elif a == 'n':
+        break
+    else:
+        print("Invalid Input")
+        exit()
+
+print(f"This is your current list {ls}")
+print("Reversed list from Python-Inbuilt method =",end=" ")
+ls.reverse()
+print(ls)
+ls.reverse()                                # Used here to get the origin list back
+print("Reversed list from String-Slicing method =",end=" ")
+print(ls[::-1])
+
+lg = len(ls)                                # lg = Length of the list
+for i in range(0,lg//2):
+    ls[i],ls[lg-i-1] = ls[lg-i-1],ls[i]
+print("Reversed list from Special method =",end=" ")
+print(ls)
