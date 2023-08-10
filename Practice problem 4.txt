@@ -1,0 +1,24 @@
+# The Next Pallindrome
+
+def Pal_func(n):
+    n = n+1
+    while not is_pal(n):
+        n = n+1
+    return n
+
+def is_pal(n):
+    return str(n) == str(n)[::-1]
+
+if __name__ == '__main__':
+
+    num = []
+    print("Enter the number of test cases")
+    test = int(input())
+
+    for i in range(test):
+        print("Enter a number")
+        nn = int(input())
+        num.append(nn)
+
+    for i in range(test):
+        print(f"The next Pallindrome for {num[i]} is {Pal_func(num[i])}")
