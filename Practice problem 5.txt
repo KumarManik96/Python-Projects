@@ -1,0 +1,32 @@
+# Pallindromify the list
+
+def Pal_func(n):
+    n = n+1
+    while not is_pal(n):
+        n = n+1
+    return n
+
+def is_pal(n):
+    return str(n) == str(n)[::-1]
+
+if __name__ == '__main__':
+
+    ls = []                                           # Original List given by the user
+    print("Enter the number of test cases")
+    test = int(input())
+
+    for i in range(test):
+        print("Enter a number")
+        nn = int(input())
+        ls.append(nn)
+    print(f"Original List = {ls}")
+
+    nl = []                                           # New list
+    for element in ls:
+        if element>10:
+            next = Pal_func(element)
+            nl.append(next)
+
+        else:
+            nl.append(element)
+    print(f"New List = {nl}")
