@@ -3,7 +3,7 @@
 import random
 
 print("Welcome to Guess the number game\n")
-print("Please choose two random numbers")
+print("Please choose two random numbers\n")
 a = int(input())
 b = int(input())
 
