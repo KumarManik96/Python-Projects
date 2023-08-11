@@ -29,7 +29,7 @@ while(True):
         p1+=1
         break
 
-print("Player Two plays now\n")
+print("Player 2 plays now\n")
 print("Enter your name\n")
 p2_name = input()
 n2 = random.randint(a, b)
