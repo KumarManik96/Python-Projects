@@ -1,0 +1,59 @@
+# Guess the number
+
+import random
+
+print("Welcome to Guess the number game\n")
+print("Please choose two random numbers\n")
+a = int(input())
+b = int(input())
+
+p1 = 0
+p2 = 0
+print("Player 1 plays now\n")
+print("Enter your name\n")
+p1_name = input()
+n1 = random.randint(a, b)
+
+while(True):
+
+    print(f"Please take a guess between {a} and {b}\n")
+    g = int(input())
+    if g>n1:
+        print("Your number is greater that actual number\n")
+        p1+=1
+    elif g<n1:
+        print("Your number is smaller that actual number\n")
+        p1+= 1
+    else:
+        print("Congratulations Your guessed it right\n")
+        p1+=1
+        break
+
+print("Player Two plays now\n")
+print("Enter your name\n")
+p2_name = input()
+n2 = random.randint(a, b)
+
+while(True):
+
+    print(f"Please take a guess between {a} and {b}\n")
+    g = int(input())
+    if g>n2:
+        print("Your number is greater that actual number\n")
+        p2+=1
+    elif g<n2:
+        print("Your number is smaller that actual number\n")
+        p2+= 1
+    else:
+        print("Congratulations Your guessed it right\n")
+        p2+=1
+        break
+
+print("Game ends here\n")
+if p1<p2:
+    print(f"Player-1 won becasue {p1_name} took {p1} guesses and {p2_name} took {p2} guesses")
+elif p1>p2:
+    print(f"Player-2 won becasue {p2_name} took {p2} guesses and {p1_name} took {p1} guesses")
+else:
+    print("Wowwwww unbelievable !!!!!! It's a draww")
+    print(f"Both {p1_name} and {p2_name} took similar number of guesses = {p1}")
