@@ -1,0 +1,27 @@
+# Search Engine
+
+def matching_words(sentence1,sentence2):
+    word1 = sentence1.split(" ")
+    word2 = sentence2.split(" ")
+    score = 0
+    for w1 in word1:
+        for w2 in word2:
+            # print(f"Matching {w1} with {w2}")
+            if w1.lower() == w2.lower():
+                score+=1
+    return score
+
+if __name__ == '__main__':
+    # matching_words("This is good","Python is interesting")
+    sentences = ["Python is good", "This is snake",
+                 "Honey is a good boy", "Subscribe to my YouTube"]
+
+    print("Please enter the query string")
+    query = input()
+    scores = [matching_words(query,sentence) for sentence in sentences]
+    # print(scores)
+    sortedSentScore = [sentScore for sentScore in sorted(zip(scores,sentences), reverse=True)]
+    # print(sortedSentScore)
+    print(f"{len(sortedSentScore)} results found !")
+    for score,item in sortedSentScore:
+        print(f" \"{item}\" : Matches found = {score}")
