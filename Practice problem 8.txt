@@ -1,4 +1,5 @@
 # Fake Multiplication Table
+
 import random
 
 def RohanMultiplication(number):
